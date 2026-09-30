@@ -1,0 +1,51 @@
+{
+  "convention": "rpm = 15 x firing frequency (4 firings per crank revolution)",
+  "f458": {
+    "launch_hold": {
+      "seconds": [
+        0.5,
+        1.8
+      ],
+      "firing_hz": 198.5,
+      "rpm": 2977
+    },
+    "first_gear_pull": {
+      "seconds": [
+        2.95,
+        4.65
+      ],
+      "rpm_start": 2708,
+      "rpm_end": 4489
+    },
+    "harmonics_at_4.15s_relative_to_294Hz": {
+      "0.5x": -25.4,
+      "1x": -0.2,
+      "1.5x": -25.9,
+      "2x": -18.4,
+      "3x": 0.0,
+      "4x": -14.2
+    }
+  },
+  "f430_gt": {
+    "sweep": {
+      "seconds": [
+        5.9,
+        7.45
+      ],
+      "rpm_start": 4948,
+      "rpm_end": 7646,
+      "level_db_range": [
+        -18.9,
+        -9.9
+      ]
+    },
+    "harmonics_at_8.85s_relative_to_240Hz": {
+      "0.5x": -40.6,
+      "1x": -16.8,
+      "1.5x": -30.6,
+      "2x": 0.0,
+      "3x": -6.6,
+      "4x": -13.7
+    }
+  }
+}

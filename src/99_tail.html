@@ -1,0 +1,19 @@
+</script>
+<script>
+  window.addEventListener('error', function (e) {
+    var el = document.getElementById('err');
+    el.style.display = 'block';
+    el.textContent = 'Error: ' + (e.message || e) + (e.filename ? ' (' + e.filename.split('/').pop() + ':' + e.lineno + ')' : '');
+  });
+  setTimeout(function () {
+    if (!window.__v8ready) {
+      var el = document.getElementById('err');
+      if (el.style.display !== 'block') {
+        el.style.display = 'block';
+        el.textContent = 'The 3D engine did not start. It loads Three.js from cdn.jsdelivr.net, so an internet connection is needed on first open.';
+      }
+    }
+  }, 15000);
+</script>
+</body>
+</html>
