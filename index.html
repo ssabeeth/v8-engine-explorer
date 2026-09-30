@@ -2633,13 +2633,14 @@ function scriptEngineNode(ctx) {
 }
 const WORKLET_URL = URL.createObjectURL(new Blob([ENGINE_WORKLET], { type: 'application/javascript' }));
 const PROFILES = {
-  rec: { mode: 1, drive: 1.8, rec: true }, // real 458 recording loops (synth only below ~2,000 rpm)
+  rec: { mode: 1, drive: 1.8, rec: true }, // recorded Ferrari loops (synth only below ~2,000 rpm)
   flat: { mode: 1, drive: 1.8 },   // alternating banks: clean, high-revving shriek
   cross: { mode: 0, drive: 1.5 },  // uneven bank pulses: deep burble
 };
+// level-matched: the synth idle hands over to the recordings without a jump
 const SYNTH_TRIM = 0.45, REC_TRIM = 1.0;
 // measured per-loop level correction so the recorded loops are equally loud through the mix bus
-const LOOP_TRIM = [1.0, 1.22, 1.53, 1.68];   // level-matched: synth idle hands over to the recording without a jump
+const LOOP_TRIM = [1.0, 1.22, 1.53, 1.68];
 /* how much synth vs. each recorded loop to use at a given rpm.
    Loops are sorted by their recorded rpm; between two neighbours we crossfade
    in the middle of the (log-rpm) gap so each loop plays close to its native pitch. */
